@@ -26,12 +26,6 @@ class miCabecera extends HTMLElement{
     }
 }
 customElements.define('mi-cabecera', miCabecera);
-function cerrarSesion(){
-	sessionStorage.setItem("administrador","false");
-    sessionStorage.setItem("iniciado", "false");
-    sessionStorage.removeItem("usu");
-    window.location.href = "main.html";
-}
 function preparar(){
 	var titulo = "";
 	var autor = "";

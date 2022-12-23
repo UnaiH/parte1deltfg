@@ -144,9 +144,3 @@ function eliminar_usuario(){
 		}
     }
 }
-function cerrarSesion(){
-    sessionStorage.setItem("iniciado", "false");
-    sessionStorage.setItem("administrador","false");
-    sessionStorage.removeItem("usu");
-    window.location.href = "main.html";
-}

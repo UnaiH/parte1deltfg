@@ -52,9 +52,3 @@ function iniciar_sesion(){
 		}
 	})
 }
-function cerrarSesion(){
-	sessionStorage.setItem("administrador","false");
-    sessionStorage.setItem("iniciado", "false");
-    sessionStorage.removeItem("usu");
-    window.location.href = "main.html";
-}
