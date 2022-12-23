@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Comparador</title>
+        <link rel="stylesheet" href="./css/diseno.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/iniciarSesion.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <mi-cabecera></mi-cabecera>
+        </div>
+        <div class="flex-parent input-center input-heigth">
+            <label for="usuario" maxlength="40" size="40">Usuario:</label>
+            <input type="text" name="usuario" id="usuario">
+        </div>
+        <div class="flex-parent input-center">
+            <label for="password" maxlength="40" size="40">Contraseña:</label>
+            <input type="password" name="password" id="contrasena">
+        </div>
+        <div class="flex-parent" style="margin-left: 50%; margin-top: 5%;">
+            <button type="button" onclick=iniciar_sesion()>Inciar Sesión</button>
+        </div>
+    </body>
+</html>

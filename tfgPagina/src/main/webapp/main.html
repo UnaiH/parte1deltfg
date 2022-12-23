@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Comparador</title>
+        <link rel="stylesheet" href="./css/diseno.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="./js/main.js"></script>
+    </head>
+    <body onload="ocultar()">
+        <div class="header">
+            <mi-cabecera></mi-cabecera>
+        </div>
+        <div class="flex-parent input-center input-heigth">
+            <label for="titulo">Titulo (máximo 160 caracteres)</label>
+            <input type="text" id="titulo" name="titulo" maxlength="160">  
+        </div>
+        <div class="flex-parent input-center">
+            <label for="titulo">Nombre del autor (máximo 160 caracteres)</label>
+            <input type="text" id="nombre" name="nombre" maxlength="160">  
+        </div>
+        <div class="flex-parent input-center">
+            <label for="titulo">Apellidos de autor (máximo 160 caracteres)</label>
+            <input type="text" id="apellidos" name="apellidos" maxlength="160">  
+        </div>
+        <div class="btn-group flex-parent btn-center">
+            <button type="button" onclick=buscar_libro()>Buscar libro</button>
+            <button type="button" onclick=buscar_enlaces()>Buscar enlaces</button>
+            <button type="button" onclick=buscar_resenas()>Ver reseñas</button>
+            <button type="button" onclick=escribir_resena() id="bEscribirResena">Escribir reseña</button>
+            <button type="button" onclick=buscar_todas_resenas()>Ver todas reseñas</button>
+        </div>
+        <div class="flex-parent input-center" style="margin-top: 5%">
+            <input type="text" id="usuElim" maxlength="40" size="40">
+            <button type="button" id="btnElim" class="button" onclick= eliminar_usuario();>Eliminar usuario</button>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Comparador</title>
+        <link rel="stylesheet" href="./css/diseno.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="./js/listaPrecios.js"></script>
+    </head>
+    <body onload=preparar()>
+        <div class="header">
+            <mi-cabecera></mi-cabecera>
+        </div>
+        <div class="input-heigthText">
+            <p class="textoIzq" id="autor">Autor:</p> 
+            <p class="textoIzq" id="titulo">Título:</p>
+        </div>
+        <div>
+            <table class="tabla tablaCentro" id="tablaEnlaces" style="width: 60%">
+            <thead>
+                <tr class="titulos">
+                    <th style="width: 50%;">Precio</th>
+                    <th style="width: 50%;">Enlace</th>
+                </tr>
+            </thead>
+            <tbody id="cuerpo">
+            </tbody>
+            </table>
+        </div>
+    </body>
+</html>
