@@ -10,7 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+//Este servlet se encarga de gestionar las solicitudes del frontend relacionadas con las resenas
 /**
  * Servlet implementation class resenas
  */

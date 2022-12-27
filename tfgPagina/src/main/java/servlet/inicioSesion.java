@@ -27,6 +27,7 @@ public class inicioSesion extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+    //Al recibir este servlet una peticion get que realizara la comprobacion para iniciar sesion sino es correcto se devuelve un mensaje de erorr
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String user = request.getParameter("usuario");
@@ -37,11 +38,4 @@ public class inicioSesion extends HttpServlet {
 			response.sendError(451);
 		}
 	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	}
-
 }

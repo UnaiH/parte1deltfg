@@ -22,24 +22,17 @@ public class registrarse extends HttpServlet {
         super();
         // TODO Auto-generated constructor stub
     }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
-
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+    //Al recibir una solicitud post este servlet llevara a cabo el proceso correspondiente para registrar en la base de datos.
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Se ha recogido la peticion en el servlet");
 		Comparador com = Comparador.getMiComparador();
 		String usuario = request.getParameter("usuario");
 		String password = request.getParameter("password");
 		boolean registrado = com.registrarse(password,usuario);
+		//Si se recibiera false se devolveria un codigo de error y sino no se devolveria nada
 		if(!registrado) {
 			response.sendError(450);
 		}

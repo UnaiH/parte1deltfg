@@ -31,6 +31,7 @@ public class precios extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+    //Este servlet realizara la busqueda del mejor precio o de todos los enlaces en funcion del valor de la variable tipo.
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Get del servlet precios");
 		String titulo = request.getParameter("titulo");
@@ -38,6 +39,7 @@ public class precios extends HttpServlet {
 		String tip = request.getParameter("tipo");
 		int tipo =Integer.parseInt(tip);
 		if(tipo==1) {
+			//Si tipo es 1 buscara el precio mas bajo del libro.
 			System.out.println("Buscando mejor precio");
 			LibroAuxiliar libro = Comparador.getMiComparador().buscarLibro(titulo.replace(" ", "_"), autor.replace(" ", "_"));
 			if(libro != null) {
@@ -49,6 +51,7 @@ public class precios extends HttpServlet {
 				response.sendError(453);
 			}
 		}else if(tipo==2) {
+			//Si tipo es 2 buscara el todos los precios posibles.
 			System.out.println("Buscando todos los enlaces");
 			ArrayList<LibroAuxiliar> libros = Comparador.getMiComparador().mostrarTodosEnlaces(titulo.replace(" ", "_"), autor.replace(" ", "_"));
 			int i = 0;

@@ -28,6 +28,7 @@ public class EliminarUsuario extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+    //Este servlet si recibe una peticion get realizara lo necesario para eliminar el usuario. Si no se elimina por un error se devuelve un codigo de error
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter pw=response.getWriter();
 		String aux = request.getParameter("usuario");
@@ -37,12 +38,5 @@ public class EliminarUsuario extends HttpServlet {
 		}
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		System.out.println("Pasa");
-	}
 
 }
