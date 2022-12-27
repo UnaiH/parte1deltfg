@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConexionMySQL {
+	//Esta clase gestiona la conexion con la base de datos.
     private String port = "3306";
     private String url = "jdbc:mysql://localhost:3306/tfg";
     private String username = "tfg";

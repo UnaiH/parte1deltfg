@@ -1,6 +1,7 @@
 package clases;
 
 public class resAux {
+	//Esta clase guarda la informacion como es el nombre de usuario, la resena (el texto), el titulo del libro y el autor de libro.
     private String usu;
     private String res;
     private String tit;

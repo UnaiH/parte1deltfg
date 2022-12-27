@@ -1,6 +1,7 @@
 package clases;
 
 public class Libro {
+	//Esta clase guarda la informacion de un libro como es el titulo del libro, el autor del libro y el precio del libro.
     private String titulo;
     private String autor;
     private Double precio;

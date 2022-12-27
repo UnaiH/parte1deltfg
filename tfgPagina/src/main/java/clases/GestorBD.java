@@ -22,12 +22,13 @@ public class GestorBD {
     }
 
     public boolean registrarse(String password, String usuario) {
+    	//Esta funcion realiza la conexion a la base de datos para verificar si existe un usuario y si no existe se hace la llamada para insertar el valor en la BD.
         try {
             Statement sql = (Statement) ConexionMySQL.getConexionMySQL().conectarMySQL().createStatement();
             String consulta = "SELECT usuario FROM usuario WHERE usuario ='" + usuario + "'";
             ResultSet res = sql.executeQuery(consulta);
             System.out.println("Verificación de existencia del usuario");
-            if (res != null) {
+            if (res != null && !res.next()) {
             	System.out.println("Creando usuario en la base de datos");
                 consulta = "INSERT INTO usuario(usuario, password, administrador) VALUES('" + usuario + "','"
                         + password + "'," + 0 + ")";
@@ -44,6 +45,7 @@ public class GestorBD {
     }
 
     public HashMap<String,ListaResenasAux> mostrarTodasResenas() {
+    	//Esta funcion se usa para obtener todas las resenas de la base de datos. Se devolvera un HashMap donde la clave es el nombre de usuario y el valor es una lista de todas las resenas.
         HashMap<String,ListaResenasAux> usuResenas = new HashMap<String,ListaResenasAux>();
         ListaResenasAux lista = null;
         System.out.println("Iniciada busqueda de las resenas");
@@ -70,6 +72,7 @@ public class GestorBD {
     }
 
     public ListaResenas mostrarResena(String titulo, String autor) {
+    	//Esta funcion se usa para conseguir las resenas de un libro en concreto devolviendo la lista de las resenas.
     	ListaResenas lista = new ListaResenas();
         try {
         	System.out.println("Buscando resenas de "+titulo);
@@ -90,6 +93,7 @@ public class GestorBD {
 
     public boolean iniciarSesion(String password, String usuario) {
         ResultSet res = null;
+        //Esta funcion llama a la base de datos para verificar si exisre un usuario con la contrasena concreta. Si es asi se devolvera true y si no se devolvera false.
         try {
             Statement sql = (Statement) ConexionMySQL.getConexionMySQL().conectarMySQL().createStatement();
             System.out.println("Verificación de existencia del usuario");
@@ -114,6 +118,7 @@ public class GestorBD {
     }
 
     public void escribirResena(String usuario, String titulo, String autor, String texto) {
+    	//Esta funcion realiza la conexion a la base de datos para verificar si el usuario existe. Si existe se verifica si no existe la resena y si no existe se inserta en la base de datos
         try {
         	System.out.println("Iniciando escritura de resena");
             Statement sql = (Statement) ConexionMySQL.getConexionMySQL().conectarMySQL().createStatement();
@@ -138,6 +143,7 @@ public class GestorBD {
     }
 
     public boolean eliminarUsuario(String usuario) {
+    	//Esta funcion realiza la conexion a la base de datos para eliminar la usuario de la BD.
         try {
         	Statement sql = (Statement) ConexionMySQL.getConexionMySQL().conectarMySQL().createStatement();
             String consulta = "SELECT usuario FROM usuario WHERE usuario ='" + usuario + "'";
@@ -159,6 +165,7 @@ public class GestorBD {
     }
 
     public void eliminarResena(String titulo, String autor, String usuario) {
+    	//Esta funcion realiza la conexion a la base de datos para eliminar la resena de la BD.
         try {
             Statement sql = (Statement) ConexionMySQL.getConexionMySQL().conectarMySQL().createStatement();
             String consulta = "DELETE FROM Resena WHERE usuario='" + usuario + "' AND titulo='" + titulo + "' AND autor='"
@@ -172,6 +179,7 @@ public class GestorBD {
     }
 
     public void anadirLibro(String titulo, String autor) {
+    	//Esta funcion realiza la conexion a la base de datos para verificar si existe un libro y si no existe se hace la llamada para insertar el valor en la BD.
         try {
         	System.out.println("Comprobando existencia del libro");
             Statement sql = (Statement) ConexionMySQL.getConexionMySQL().conectarMySQL().createStatement();

@@ -3,6 +3,7 @@ package clases;
 import java.util.ArrayList;
 
 public class ListaResenasAux {
+	//Esta clase almacena las resAux en una estrctura ArrayList.
     private ArrayList<resAux> resenas;
 
     public ListaResenasAux() {

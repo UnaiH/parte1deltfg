@@ -1,6 +1,7 @@
 package clases;
 
 public class LibroAuxiliar {
+	//Clase que guarda la informacion precio y enlace de un libro
     private Double precio;
     private String enlace;
 
