@@ -32,7 +32,9 @@ public class EliminarUsuario extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter pw=response.getWriter();
 		String aux = request.getParameter("usuario");
+		//Se hace la llamada a la clase Comparador para eliminar el usuario
 		boolean eliminado = Comparador.getMiComparador().eliminarUsuario(aux);
+		//Si llega de respuesta un false se manda un mensaje de error.
 		if(!eliminado) {
 			response.sendError(452);
 		}

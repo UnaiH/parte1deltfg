@@ -29,11 +29,10 @@ public class inicioSesion extends HttpServlet {
 	 */
     //Al recibir este servlet una peticion get que realizara la comprobacion para iniciar sesion sino es correcto se devuelve un mensaje de erorr
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		String user = request.getParameter("usuario");
 		String pass = request.getParameter("password");
 		System.out.println("Usuario: "+user+" Contrasena: "+pass);
-		System.out.println(Comparador.getMiComparador().iniciarSesion(pass, user));
+		//Se hace una llamada para verificar si se puede iniciar sesion con esas credenciales o no. Sino se devuelve un error.
 		if(!Comparador.getMiComparador().iniciarSesion(pass, user)) {
 			response.sendError(451);
 		}
