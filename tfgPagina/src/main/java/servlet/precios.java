@@ -66,8 +66,10 @@ public class precios extends HttpServlet {
 						out.println(libros.get(i).getEnlace()+",");
 						i++;
 					}
+					System.out.println("Todos los precios buscados");
+				}else {
+					response.sendError(453);
 				}
-				System.out.println("Todos los precios buscados");
 			}else {
 				response.sendError(453);
 			}
