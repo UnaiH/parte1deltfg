@@ -82,7 +82,7 @@ public class resenas extends HttpServlet {
 				i++;
 			}
 		}else {
-			
+			response.sendError(453);
 		}
 	}
 
@@ -106,7 +106,7 @@ public class resenas extends HttpServlet {
 			Comparador.getMiComparador().eliminarResena(usuario, titulo, autor);
 			System.out.println("Resena borrada");
 		}else {
-			
+			response.sendError(454);
 		}
 	}
 
