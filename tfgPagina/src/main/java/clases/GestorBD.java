@@ -149,11 +149,12 @@ public class GestorBD {
             String consulta = "SELECT usuario FROM usuario WHERE usuario ='" + usuario + "'";
             ResultSet res = sql.executeQuery(consulta);
             System.out.println("Verificación de existencia del usuario");
+            System.out.println(res!=null);
             if (res != null) {
 	        	System.out.println("Eliminando usuario");
 	            sql = (Statement) ConexionMySQL.getConexionMySQL().conectarMySQL().createStatement();
-	            consulta = "DELETE FROM usuario WHERE usuario'" + usuario + "'";
-	            sql.executeQuery(consulta);
+	            consulta = "DELETE FROM usuario WHERE usuario='" + usuario + "'";
+	            sql.executeUpdate(consulta);
 	            System.out.println("Usuario eliminado");
 	            return true;
             }

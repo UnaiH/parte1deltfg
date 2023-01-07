@@ -136,7 +136,7 @@ function eliminar_usuario(){
 		//Se verifica que se pretenda eliminar el usuario administrador para evitar esa posibilidad. Si es el usuario administrador se lanza un alert y se borra lo escrito en el campo correspondiente.
 		if(usuElim != "administrador"){
 	        $.ajax({
-				type: "POST",
+				type: "GET",
 				url:"http://localhost:8080/tfgPagina/eliminarusu?usuario="+usuElim,
 				success:function(){
 					//Si funciona correctamente se borra el campo correspondiente y se lanza un mensaje
