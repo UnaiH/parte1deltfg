@@ -222,16 +222,19 @@ public class GestorConexionApis {
 		        			String link = "https:" + precios.split("buyLink")[1].split(",")[0].split(":")[2].replace("\"", "");
 		        			String[] listaPrecio = precios.split("listPrice");
 		        			int l=0;
+		        			boolean fin1=false;
 		        			//A partir de aqui se hace la comprobacion del precio minimo para obtener el precio minimo junto con el link correspondiente
-		        			while(l<listaPrecio.length) {
+		        			while(l<listaPrecio.length && !fin1) {
 		        				if(l==1) {
 			        			int k=0;
 			        				String[] amounts= listaPrecio[1].split("amount");
-				        			while(k < amounts.length) {
+			        				boolean fin2=false;
+				        			while(k < amounts.length && !fin2) {
 				        				if(k==1) {
 						        			int j=0;
 						        			String[] filtrados=amounts[1].split(",");
-						        			while(j < filtrados.length) {
+						        			boolean fin3=false;
+						        			while(j < filtrados.length && !fin3) {
 						        				if(j==0) {
 						        					String filtr = filtrados[0].replace("\": ", "");
 						        					System.out.println(filtr);
@@ -239,12 +242,15 @@ public class GestorConexionApis {
 								        				precioMin = Double.parseDouble(filtr);
 								        				linkMin = link;
 								        			}
+								        			fin3=true;
 						        				}
 						        				j++;
 						        			}
+						        			fin2=true;
 				        				}
 				        				k++;
 				        			}
+				        			fin1=true;
 		        				}
 		        				l++;
 		        			}
