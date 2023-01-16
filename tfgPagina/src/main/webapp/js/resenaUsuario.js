@@ -56,7 +56,7 @@ function preparar(){
 					var usu = resenas[i-1].split(".")[0].split(";;")[1].trim();
 				}
 				if(i==1){
-					var numRes = resenas[i-1].split("/")[0].split("|")[1].trim();
+					var numRes = resenas[i-1].split(".")[1].split("*")[0].trim();
 				}else{
 					var numRes = resenas[i-1].split(".")[1].split("*")[0].trim();
 				}

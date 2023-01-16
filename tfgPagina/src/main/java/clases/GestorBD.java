@@ -55,6 +55,8 @@ public class GestorBD {
             ResultSet res = sql.executeQuery(consulta);
             if (res != null) {
                 while (res.next()) {
+                	System.out.println(res.getString("usuario"));
+                	System.out.println(res.getString("texto"));
                 	if(!usuResenas.containsKey(res.getString("usuario"))) {
                 		lista = new ListaResenasAux();
                 		lista.addResena(new resAux(res.getString("usuario"), res.getString("texto"),res.getString("titulo"), res.getString("autor")));
