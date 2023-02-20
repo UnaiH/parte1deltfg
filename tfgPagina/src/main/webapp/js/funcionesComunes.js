@@ -10,10 +10,11 @@ function borrarResena(usu,autor,titulo,ventana){
 		url:"http://localhost:8080/tfgPagina/resenas?usu="+usu+"&autor="+autor+"&titulo="+titulo+"&tipo="+tipo,
 		success:function(){
 			alert("Se ha eliminado la resena correctamente");
-			window.location.href = ventana;
+			window.location.href = "main.html";
 		},
 			error:function(d,s,e){
 		    alert("Error al eliminar resena");
+		    window.location.href = "main.html";
 			}
 	})
 }

@@ -118,5 +118,5 @@ function preparar(){
 }
 //Esta funcion realiza la llamada a la funcion comun llamada borrar resena que realiza la funcion que su nombre indica.
 function llamarEliminar(i){
-	borrarResena(document.getElementById("cuerpo").rows[i].cells[0].innerHTML.trim(),document.getElementById("autor").innerHTML.split(": ")[1],document.getElementById("titulo").innerHTML.split(": ")[1],"resenasLibro.html");
+	borrarResena(document.getElementById("cuerpo").rows[i].cells[0].innerHTML.trim(),document.getElementById("cuerpo").rows[i].cells[1].innerHTML.trim(),document.getElementById("cuerpo").rows[i].cells[2].innerHTML.trim(),"resenasLibro.html");
 }
