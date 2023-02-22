@@ -68,7 +68,6 @@ function preparar(){
 					//Se crea la fila para la tabla
 					var row = tabla.insertRow(j);
 					//Al ser distinto el primer registro del usuario en la tabla se modifica un poco el codigo
-					if(j==0){
 						auxiliar = resAux[j]
 						//Se crea la celda correspondiente de esa fila
 						var cell1 = row.insertCell(0);
@@ -86,24 +85,6 @@ function preparar(){
 						}else{
 							cell5.innerHTML="";
 						}
-					}else{
-						//Este codigo es para escribir el resto de registros en la tabla
-						auxiliar = resAux[j]
-						var cell1 = row.insertCell(0);
-						cell1.innerHTML="";
-						var cell2 = row.insertCell(1);
-						cell2.innerHTML=auxiliar.split(",")[0];
-						var cell3 = row.insertCell(2);
-						cell3.innerHTML=auxiliar.split(",")[1];
-						var cell4 = row.insertCell(3);
-						cell4.innerHTML=auxiliar.split(",")[2];
-						var cell5 = row.insertCell(4);
-						if(administrador=="true"){
-							cell5.innerHTML='<button class="botonElim" title="Eliminar" onclick=llamarEliminar('+j+');><img src="http://localhost:8080/tfgPagina/imagenes/borrar.jpg"></button>';
-						}else{
-							cell5.innerHTML="";
-						}
-					}
 					j++;
 				}
 				i++;

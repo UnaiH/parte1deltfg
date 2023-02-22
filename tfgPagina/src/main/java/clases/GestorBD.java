@@ -169,6 +169,7 @@ public class GestorBD {
 
     public void eliminarResena(String titulo, String autor, String usuario) {
     	//Esta funcion realiza la conexion a la base de datos para eliminar la resena de la BD.
+    	System.out.print("Usuario: " + usuario + ", Titulo: "+titulo+", Autor: "+autor);
         try {
             Statement sql = (Statement) ConexionMySQL.getConexionMySQL().conectarMySQL().createStatement();
             String consulta = "DELETE FROM Resena WHERE usuario='" + usuario + "' AND titulo='" + titulo + "' AND autor='"
