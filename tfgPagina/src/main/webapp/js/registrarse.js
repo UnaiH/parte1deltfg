@@ -97,7 +97,8 @@ function registrarse(){
 				error:function(d,s,e){
 					//Si falla se borran los campos y se lanza un alert
 					document.getElementById("usuario").value = "";
-		       		document.getElementById("contrasena").value = "";
+		       		document.getElementById("contr").value = "";
+					document.getElementById("confContr").value = "";
 		       		alert("Error al registrarse. El usuario ya existe");
 				}
 			})
