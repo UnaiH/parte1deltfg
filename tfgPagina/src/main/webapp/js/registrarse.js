@@ -106,7 +106,7 @@ function registrarse(){
     else{
         if(contr!=contrConf){
 			//Si la contrasena y la confirmacion de contrasena no coinciden se borran los datos introducidos en los campos de la pagina y se lanza un alerta diciendo que no coinciden
-            alert("Las constraseñas no coinciden")
+            alert("Las constraseñas no coinciden");
             document.getElementById("usuario").value = "";
             document.getElementById("contr").value = "";
             document.getElementById("confContr").value = "";
