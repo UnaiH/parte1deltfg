@@ -39,6 +39,7 @@ function ocultar(){
     if(sessionStorage.getItem('administrador')=="false"){
 		document.getElementById("usuElim").hidden=true;
 		document.getElementById("btnElim").hidden=true;
+		document.getElementById("buscarTodasResenas").hidden=true;
 	}
 }
 //Se verifica en esta fucion que los campos de titulo, nombre del autor y apellidos del autor no estan vacios si lo estan se lanza un mensaje mediante un alert. Si no se redirige a la pagina para escribir la resena
