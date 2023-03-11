@@ -52,13 +52,12 @@ function preparar(){
 				if(i==1){
 					var usu = resenas[0].split(".")[0].split("/")[1].trim();
 				}else{
-					console.log(resenas[i]);
-					var usu = resenas[i-1].split(".")[0].split(";;")[1].trim();
+					var usu = respuesta.split(";;")[i-1].split(".")[0].trim();
 				}
 				if(i==1){
 					var numRes = resenas[i-1].split(".")[1].split("*")[0].trim();
 				}else{
-					var numRes = resenas[i-1].split(".")[1].split("*")[0].trim();
+					var numRes = respuesta.split(";;")[i-1].split(".")[1].split("*")[0].trim();
 				}
 				var j = 0;
 				var resAux = respuesta.split("*")[i].split(";");
