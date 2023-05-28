@@ -47,6 +47,7 @@ function preparar(){
 			var numRes = resenas[1].split(".")[1].split("*")[0].trim();
 			resenas = respuesta.split("*");
 			var tabla = document.getElementById("cuerpo");
+			var j = 0;
 			while (i<=numUsu){
 				console.log(resenas[i]);
 				if(i==1){
@@ -59,7 +60,6 @@ function preparar(){
 				}else{
 					var numRes = respuesta.split(";;")[i-1].split(".")[1].split("*")[0].trim();
 				}
-				var j = 0;
 				var resAux = respuesta.split("*")[i].split(";");
 				//Este bucle se realiza para introducir los datos en la tabla
 				while(j<numRes){
