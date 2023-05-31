@@ -56,7 +56,6 @@ function preparar(){
 				var row = tabla.insertRow(k);
 				var cell1 = row.insertCell(l);
 				l++;
-				var aux = "Enlace" + m;
 				var cell2 = row.insertCell(l);
 				cell1.innerHTML=resultados[j];
 				j++;
